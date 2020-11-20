@@ -6,7 +6,7 @@ from datetime import datetime
 
 #Defining our target
 if len (sys.argv) == 2:
-	target=sicket.gethosetbyname(syys.argv[1]) #translate hostname to IPv4
+	target=socket.gethostbyname(sys.argv[1]) #translate hostname to IPv4
 else:
 	print("invalid amount of arguments.")
 	print("Syntax: python3 scanner.py <ip>")
@@ -20,7 +20,7 @@ print("-"*50)
 
 try:
 	for port in range(50,85):
-		s = socket.socker(socket.AF_INET, socket.SOCK_STREAM)
+		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		socket.setdefaulttimeout(1)
 		result = s.connect_ex((target,port))# returns an error indicator
 		if result ==0:
