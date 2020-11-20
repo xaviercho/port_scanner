@@ -6,7 +6,7 @@ from datetime import datetime
 
 #Defining our target
 if len (sys.argv) == 2:
-	target=sicket.gethosetbyname(syys.argv[]1) #translate hostname to IPv4
+	target=sicket.gethosetbyname(syys.argv[1]) #translate hostname to IPv4
 else:
 	print("invalid amount of arguments.")
 	print("Syntax: python3 scanner.py <ip>")
